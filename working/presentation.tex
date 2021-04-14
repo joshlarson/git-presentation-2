@@ -6,8 +6,8 @@
 
 \definecolor{arrowcolor}{rgb}{0.5,0.5,1}
 
-\title{Git: Rebase Your Expectations}
-\subtitle{How to fixup your life}
+\title{Gitshop Workhub}
+\subtitle{(re)Based on a True Story}
 \author{Josh Larson}
 \beamertemplatenavigationsymbolsempty
 
@@ -378,18 +378,18 @@
         \draw (commit6) -- (commit7);
         \draw (commit3) -- (commit7);
         
-        \branch{master}{(2.5, 1)}{master}
-        \draw (master) -- (commit7);
+        \branch{main}{(2.5, 1)}{main}
+        \draw (main) -- (commit7);
       }
 
       \uncover<1-3>{
-        \branch{master}{(-5, 1)}{master}
-        \draw (master) -- (commit1);
+        \branch{main}{(-5, 1)}{main}
+        \draw (main) -- (commit1);
       }
       
       \uncover<4-5>{
-        \branch{master}{(0, 1)}{master}
-        \draw (master) -- (commit3);
+        \branch{main}{(0, 1)}{main}
+        \draw (main) -- (commit3);
       }
 
       
@@ -440,16 +440,16 @@
       }
 
       \uncover<1> {
-        \branch{master}{(-5, 1)}{master}
-        \draw (master) -- (commit1);
+        \branch{main}{(-5, 1)}{main}
+        \draw (main) -- (commit1);
       }
       \uncover<2-5> {
-        \branch{master}{(0, 1)}{master}
-        \draw (master) -- (commit3);
+        \branch{main}{(0, 1)}{main}
+        \draw (main) -- (commit3);
       }
       \uncover<6-> {
-        \branch{master}{(5, 1)}{master}
-        \draw (master) -- (commit5_2);
+        \branch{main}{(5, 1)}{main}
+        \draw (main) -- (commit5_2);
       }
 
       \uncover<1-2> {
@@ -486,8 +486,8 @@
       \commit{commit5_2}{(5, 0)}{D}
       \draw (commit4_2) -- (commit5_2);
       
-      \branch{master}{(5, 1)}{master}
-      \draw (master) -- (commit5_2);
+      \branch{main}{(5, 1)}{main}
+      \draw (main) -- (commit5_2);
     \end{tikzpicture}
   \end{center}
 
@@ -517,8 +517,8 @@
       \draw (commit6) -- (commit7);
       \draw (commit3) -- (commit7);
       
-      \branch{master}{(2.5, 1)}{master}
-      \draw (master) -- (commit7);
+      \branch{main}{(2.5, 1)}{main}
+      \draw (main) -- (commit7);
     \end{tikzpicture}
   \end{center}
 \end{frame}
@@ -630,12 +630,12 @@
       }
 
       \uncover<1-5>{
-        \branch{remotemaster}{(-2, 2.5)}{master}
-        \draw (remotemaster) -- (remotecommit2);
+        \branch{remotemain}{(-2, 2.5)}{main}
+        \draw (remotemain) -- (remotecommit2);
       }
       \uncover<6->{
-        \branch{remotemaster}{(0, 2.5)}{master}
-        \draw (remotemaster) -- (remotecommit3);
+        \branch{remotemain}{(0, 2.5)}{main}
+        \draw (remotemain) -- (remotecommit3);
       }
 
       \draw[dotted] (-5, 0) -- (5, 0);
@@ -651,27 +651,27 @@
       }
       
       \uncover<4-7>{
-        \branch{originmaster}{(-2, -2.5)}{origin/master}
-        \draw (originmaster) -- (localcommit2);
+        \branch{originmain}{(-2, -2.5)}{origin/main}
+        \draw (originmain) -- (localcommit2);
       }
       \uncover<8->{
-        \branch{originmaster}{(0, -2.5)}{origin/master}
-        \draw (originmaster) -- (localcommit3);
+        \branch{originmain}{(0, -2.5)}{origin/main}
+        \draw (originmain) -- (localcommit3);
       }
 
       \uncover<5-10>{
-        \branch{localmaster}{(-2, -0.5)}{master}
-        \draw (localmaster) -- (localcommit2);
+        \branch{localmain}{(-2, -0.5)}{main}
+        \draw (localmain) -- (localcommit2);
       }
       \uncover<11->{
-        \branch{localmaster}{(0, -0.5)}{master}
-        \draw (localmaster) -- (localcommit3);
+        \branch{localmain}{(0, -0.5)}{main}
+        \draw (localmain) -- (localcommit3);
       }
 
       \uncover<2>{\textbox{}{(0, 0)}{\texttt{git clone path@to:remote/repo}}}
       \uncover<7>{\textbox{}{(0, 0)}{\texttt{git fetch}}}
       \uncover<9>{\textbox{}{(0, 0)}{\texttt{git merge}}}
-      \uncover<10>{\textbox{}{(0, 0)}{\texttt{git merge origin/master}}}
+      \uncover<10>{\textbox{}{(0, 0)}{\texttt{git merge origin/main}}}
     \end{tikzpicture}
   \end{center}
 \end{frame}
@@ -984,7 +984,7 @@
   \begin{itemize}[<+->]
   \item Use \texttt{--fixup} commits to ``amend'' things during regular development.
   \item Coordinate with anyone else using the branch before doing a \texttt{rebase --autosquash}.
-  \item Don't do it on \texttt{master}
+  \item Don't do it on \texttt{main}
   \item ... or \texttt{release}
   \end{itemize}
 \end{frame}
@@ -1026,12 +1026,12 @@
       }
 
       \uncover<1-3, 5-8> {
-        \branch{master}{(2.5, 1)}{master}
-        \draw (commitD) -- (master);
+        \branch{main}{(2.5, 1)}{main}
+        \draw (commitD) -- (main);
       }
       \uncover<4, 9> {
-        \branch{master}{(5, 1)}{master}
-        \draw (commitM) -- (master);
+        \branch{main}{(5, 1)}{main}
+        \draw (commitM) -- (main);
       }
 
       \uncover<1, 5-6> {
@@ -1097,8 +1097,8 @@
       \alt<8, 11, 14, 25, 31>{\selectedcommit}{\commit}{commitE}{(2, 2)}{E}
       \draw (commitD) -- (commitE);
 
-      \branch{master}{(-3, 1)}{master}
-      \draw (commitA) -- (master);
+      \branch{main}{(-3, 1)}{main}
+      \draw (commitA) -- (main);
 
       \branch{foo}{(3, 1)}{foo}
       \draw (commitC) -- (foo);
@@ -1107,15 +1107,15 @@
       \draw (commitE) -- (bar);
 
       \uncover<2-3>{\textbox{}{(0, 4)}{\texttt{git diff A..C}}}
-      \uncover<4>{\textbox{}{(0, 4)}{\texttt{git diff master..foo}}}
-      \uncover<5>{\textbox{}{(0, 4)}{\texttt{git diff master...foo}}}
+      \uncover<4>{\textbox{}{(0, 4)}{\texttt{git diff main..foo}}}
+      \uncover<5>{\textbox{}{(0, 4)}{\texttt{git diff main...foo}}}
       \uncover<7-8>{\textbox{}{(0, 4)}{\texttt{git diff D..E}}}
       \uncover<10-11>{\textbox{}{(0, 4)}{\texttt{git diff foo..bar}}}
       \uncover<13-14>{\textbox{}{(0, 4)}{\texttt{git diff foo...bar}}}
       \uncover<16-17>{\textbox{}{(0, 4)}{\texttt{git diff bar...foo}}}
-      \uncover<19>{\textbox{}{(0, 4)}{\texttt{git diff master..bar spec}}}
-      \uncover<20>{\textbox{}{(0, 4)}{\texttt{git diff master..bar spec | git apply}}}
-      \uncover<21>{\textbox{}{(0, 4)}{\texttt{git diff master..bar spec > blah.patch}}}
+      \uncover<19>{\textbox{}{(0, 4)}{\texttt{git diff main..bar spec}}}
+      \uncover<20>{\textbox{}{(0, 4)}{\texttt{git diff main..bar spec | git apply}}}
+      \uncover<21>{\textbox{}{(0, 4)}{\texttt{git diff main..bar spec > blah.patch}}}
       \uncover<22>{\textbox{}{(0, 4)}{\texttt{git apply blah.patch}}}
       \uncover<24-25>{\textbox{}{(0, 4)}{\texttt{git log foo..bar}}}
       \uncover<27-28>{\textbox{}{(0, 4)}{\texttt{git log bar..foo}}}
@@ -1125,19 +1125,167 @@
 \end{frame}
 
 \begin{frame}
+  \begin{center}
+    {\Huge Crafting Commits}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \begin{center}
+    \begin{tikzpicture}
+      \uncover<1, 16>{
+        \textbox{}{(-3, 2)}{
+          \texttt{\ \ \ \ \ \textcolor{gray}{foo.txt}}\\
+          \texttt{\textcolor{gray}{------------}}\\
+          \texttt{\ This is}\\
+          \texttt{\ code}
+        }
+      }
+
+      \uncover<17>{
+        \textbox{}{(-3, 2)}{
+          \texttt{\ \ \ \ \ \textcolor{gray}{foo.txt}}\\
+          \texttt{\textcolor{gray}{------------}}\\
+          \texttt{\ This is}\\
+          \texttt{\ insightful}\\
+          \texttt{\ code}
+        }
+      }
+      
+      \uncover<2-6, 19-20>{
+        \textbox{}{(-3, 2)}{
+          \texttt{\ \ \ \ \ \textcolor{gray}{foo.txt}}\\
+          \texttt{\textcolor{gray}{------------}}\\
+          \texttt{\ This is}\\
+          \texttt{\textcolor{gray}{\ very}}\\
+          \texttt{\textcolor{gray}{\ insightful}}\\
+          \texttt{\ code}
+        }
+      }      
+
+      \uncover<21-29>{
+        \textbox{}{(-3, 2)}{
+          \texttt{\ \ \ \ \ \textcolor{gray}{foo.txt}}\\
+          \texttt{\textcolor{gray}{------------}}\\
+          \texttt{\ This is}\\
+          \texttt{\textcolor{gray}{\ very}}\\
+          \texttt{\textcolor{blue}{\ insightful}}\\
+          \texttt{\ code}
+        }
+      }      
+
+      \uncover<30-32>{
+        \textbox{}{(-3, 2)}{
+          \texttt{\ \ \ \ \ \textcolor{gray}{foo.txt}}\\
+          \texttt{\textcolor{gray}{------------}}\\
+          \texttt{\ This is}\\
+          \texttt{\textcolor{gray}{\ very}}\\
+          \texttt{\ insightful}\\
+          \texttt{\ code}
+        }
+      }      
+
+      \uncover<7-13>{
+        \textbox{}{(-3, 2)}{
+          \texttt{\ \ \ \ \ \textcolor{gray}{foo.txt}}\\
+          \texttt{\textcolor{gray}{------------}}\\
+          \texttt{\ This is}\\
+          \texttt{\textcolor{blue}{\ very}}\\
+          \texttt{\textcolor{blue}{\ insightful}}\\
+          \texttt{\ code}
+        }
+      }      
+      \uncover<14-15, 18, 33->{
+        \textbox{}{(-3, 2)}{
+          \texttt{\ \ \ \ \ \textcolor{gray}{foo.txt}}\\
+          \texttt{\textcolor{gray}{------------}}\\
+          \texttt{\ This is}\\
+          \texttt{\ very}\\
+          \texttt{\ insightful}\\
+          \texttt{\ code}
+        }
+      }      
+
+      \uncover<3-4, 9, 26-27>{\textbox{}{(0, 0)}{\texttt{git diff}}}
+      \uncover<10-11, 23-24>{\textbox{}{(0, 0)}{\texttt{git diff --cached}}}
+      \uncover<6-7>{\textbox{}{(0, 0)}{\texttt{git add .}}}
+      \uncover<20-21>{\textbox{}{(0, 0)}{\texttt{git add -p}}}
+      \uncover<13-14, 29-30>{\textbox{}{(0, 0)}{\texttt{git commit}}}
+      \uncover<32-33>{\textbox{}{(0, 0)}{\texttt{git commit -a}}}
+      
+      \uncover<4, 11>{
+        \textbox{}{(3, 2)}{
+          \texttt{\ \ This is}\\
+          \texttt{\textcolor{green}{+ very}}\\
+          \texttt{\textcolor{green}{+ insightful}}\\
+          \texttt{\ \ code}
+        }
+      }      
+
+      \uncover<24>{
+        \textbox{}{(3, 2)}{
+          \texttt{\ \ This is}\\
+          \texttt{\textcolor{green}{+ insightful}}\\
+          \texttt{\ \ code}
+        }
+      }      
+
+      \uncover<27>{
+        \textbox{}{(3, 2)}{
+          \texttt{\ \ This is}\\
+          \texttt{\textcolor{green}{+ very}}\\
+          \texttt{\ \ insightful}\\
+          \texttt{\ \ code}
+        }
+      }
+
+      \uncover<1-13, 16, 19-29>{
+        \selectedanoncommit{main}{(-4.5, -2)}
+      }
+      \uncover<14-15, 17-18, 30->{
+        \anoncommit{}{(-4.5, -2)}
+      }
+
+      \uncover<14-15, 17, 30-32>{
+        \selectedanoncommit{addinsightful}{(0, -2)}
+        \draw (main) -- (addinsightful);
+      }
+      \uncover<14-15, 18, 33->{
+        \anoncommit{addinsightful}{(0, -2)}
+        \draw (main) -- (addinsightful);
+      }
+
+      \uncover<18, 33-34>{
+        \selectedanoncommit{addvery}{(4.5, -2)}
+        \draw (addinsightful) -- (addvery);
+      }
+    \end{tikzpicture}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Crafting Commits}
+  \pause
+  \begin{itemize}[<+->]
+  \item Craft commits with \texttt{git add -p}.
+  \item A well-crafted commit also has a good commit message.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
   \frametitle{Summary}
   \pause
   \begin{itemize}[<+->]
   \item The goal of Git is to reveal \textit{intent}
   \item Rewrite history to reveal intent
-  \item Be courteous when doing that on pushed branches (not \texttt{master} or \texttt{release}!)
+  \item Be courteous when doing that on pushed branches (not \texttt{main} or \texttt{release}!)
   \item Know what your merge strategy communicates
   \item Ancestry matters
   \item Use \texttt{fixup} commits!
   \item Git is awesome!
   \end{itemize}
 \end{frame}
-
+        
 \begin{frame}
   \begin{center}
     {\Huge Questions?}
@@ -1183,18 +1331,18 @@
         \branch{bar}{(1.25, 3)}{bar}
         \draw (bar) -- (commit6);
         
-        \branch{master}{(0, 1)}{master}
-        \draw (master) -- (commit3);
+        \branch{main}{(0, 1)}{main}
+        \draw (main) -- (commit3);
       }
 
       \uncover<2> {
-        \branch{master}{(2.5, 1)}{master}
-        \draw (master) -- (commit7);
+        \branch{main}{(2.5, 1)}{main}
+        \draw (main) -- (commit7);
       }
 
       \uncover<4> {
-        \branch{master}{(1.25, 3)}{master}
-        \draw (master) -- (commit6);
+        \branch{main}{(1.25, 3)}{main}
+        \draw (main) -- (commit6);
       }
     \end{tikzpicture}
   \end{center}
